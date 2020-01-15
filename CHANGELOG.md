@@ -3,7 +3,8 @@
 ## master / unreleased
 
 * [ENHANCEMENT] metric `cortex_ingester_flush_reasons` gets a new `reason` value: `Spread`, when `-ingester.spread-flushes` option is enabled.
-
+* [CHANGE] Remove unnecessary configs/flags from the ruler ring config to align with the pattern used in the distributor ring. 
+    * Ruler ring related flags are now all prefixed with `ruler.ring.` as opposed to just `ruler.`
 * [CHANGE] Flags changed with transition to upstream Prometheus rules manager:
   * `ruler.client-timeout` is now `ruler.configs.client-timeout` in order to match `ruler.configs.url`
   * `ruler.group-timeout`has been removed
